@@ -1,0 +1,12 @@
+.env
+.env*.local
+.next/
+node_modules/
+dist/
+coverage/
+tmp/
+qa-artifacts/
+deliverables/
+books/
+*.log
+*.tsbuildinfo

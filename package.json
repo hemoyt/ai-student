@@ -1,0 +1,58 @@
+{
+  "name": "sudan-middle-school-ai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "deploy:check": "tsx scripts/predeploy-check.ts",
+    "deploy:verify": "npm run typecheck && npm run lint && npm run deploy:check && npm run build",
+    "db:setup": "tsx scripts/setup-database.ts",
+    "ai:smoke": "tsx scripts/ai-smoke-test.ts",
+    "sync:mdl": "tsx scripts/sync-mdl-intermediate.ts",
+    "curate:mdl": "tsx scripts/curate-mdl-books.ts",
+    "ingest:books": "tsx scripts/ingest-books.ts",
+    "ingest:mdl": "tsx scripts/ingest-books.ts --mdl-only",
+    "ingest:mdl:force": "tsx scripts/ingest-books.ts --mdl-only --force",
+    "seed:books": "tsx scripts/seed-books.ts"
+  },
+  "overrides": {
+    "postcss": "^8.5.15"
+  },
+  "dependencies": {
+    "@langchain/textsplitters": "^1.0.1",
+    "@radix-ui/react-slot": "^1.1.2",
+    "@supabase/ssr": "^0.10.3",
+    "@supabase/supabase-js": "^2.49.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.5.0",
+    "lucide-react": "^0.475.0",
+    "next": "^15.2.4",
+    "next-themes": "^0.4.4",
+    "pdf-parse": "^1.1.1",
+    "pg": "^8.21.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.2",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/pdf-parse": "^1.1.4",
+    "@types/pg": "^8.20.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.22.0",
+    "eslint-config-next": "^15.2.4",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}

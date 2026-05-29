@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 180 28% 97%;
+  --foreground: 202 75% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 202 75% 11%;
+  --primary: 176 90% 24%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 174 36% 93%;
+  --secondary-foreground: 164 59% 17%;
+  --muted: 180 25% 94%;
+  --muted-foreground: 201 19% 39%;
+  --accent: 162 70% 43%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 173 24% 86%;
+  --input: 173 24% 86%;
+  --ring: 176 90% 24%;
+  --font-arabic: "IBM Plex Sans Arabic", "Noto Sans Arabic", "Segoe UI", Arial;
+}
+
+.dark {
+  --background: 202 62% 8%;
+  --foreground: 180 34% 96%;
+  --card: 202 51% 11%;
+  --card-foreground: 210 40% 96%;
+  --primary: 162 70% 43%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 180 35% 16%;
+  --secondary-foreground: 180 34% 96%;
+  --muted: 202 38% 15%;
+  --muted-foreground: 180 18% 76%;
+  --accent: 176 70% 34%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 63% 45%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 198 35% 20%;
+  --input: 198 35% 20%;
+  --ring: 162 70% 43%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings: "kern";
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 85% 8%, rgb(32 186 139 / 0.08), transparent 28%),
+    linear-gradient(180deg, rgb(243 248 248 / 0.95), rgb(255 255 255 / 0.92));
+}
+
+.dark body::before {
+  background:
+    radial-gradient(circle at 85% 8%, rgb(32 186 139 / 0.12), transparent 28%),
+    linear-gradient(180deg, rgb(7 32 50 / 0.98), rgb(6 24 38 / 0.98));
+}
+
+::selection {
+  background: hsl(var(--primary) / 0.18);
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.rtl-grid {
+  direction: rtl;
+}
+
+.sudan-flag-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.45fr;
+  height: 4px;
+}
+
+.sudan-flag-strip span:nth-child(1) {
+  background: #d71920;
+}
+
+.sudan-flag-strip span:nth-child(2) {
+  background: #ffffff;
+}
+
+.sudan-flag-strip span:nth-child(3) {
+  background: #078930;
+}
+
+.sudan-flag-strip span:nth-child(4) {
+  background: #000000;
+}

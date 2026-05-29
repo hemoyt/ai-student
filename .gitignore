@@ -1,0 +1,13 @@
+.next/
+node_modules/
+dist/
+coverage/
+.env
+.env*.local
+!.env.example
+*.log
+*.tsbuildinfo
+deliverables/
+qa-artifacts/
+books/
+tmp/
