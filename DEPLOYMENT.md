@@ -166,7 +166,7 @@ If you switch to a model with a different vector size, update `documents.embeddi
 
 ## 10. Operational Notes
 
-- `.vercelignore` excludes `books/`, `deliverables/`, and QA artifacts from deployment.
+- `.vercelignore` excludes the root `/books/`, `/deliverables/`, and `/qa-artifacts/` directories from deployment while preserving app routes such as `app/api/books`.
 - Supabase should be the source of truth for PDFs and vector chunks.
 - Large scanned PDFs may need OCR before ingestion; text-only extraction cannot create useful chunks from image-only pages.
 - Back up Supabase before large reprocessing runs.
